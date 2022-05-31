@@ -1,4 +1,4 @@
-flask
-gunicorn
-python-dotenv
-setuptools
+flask==2.0.3
+gunicorn==20.1.0
+python-dotenv==0.20.0
+setuptools==62.1.0
