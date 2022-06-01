@@ -14,7 +14,7 @@ test:
 	@python -m pytest
 
 build:
-	@docker build -t ${imagename} .
+	@docker build -t ${imagename}:latest .
 
 run-docker:
-	@sudo docker run --env FLASK_ENV=development -p 5000:5000 ${imagename}
+	@sudo docker run --env FLASK_ENV=development -p 5000:5000 ${imagename}:latest
