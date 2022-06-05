@@ -18,3 +18,15 @@ build:
 
 run-docker:
 	@sudo docker run --env FLASK_ENV=development -p 5000:5000 ${imagename}:latest
+
+pre-commit:
+	@pre-commit install
+
+initial-tag:
+	@git tag -a -m "Initial tag." v0.0.1
+
+bump-tag:
+	@cz bump
+	@cz changelog
+
+all: update install install-dev pre-commit tag test run
